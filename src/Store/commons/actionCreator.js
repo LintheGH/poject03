@@ -13,8 +13,8 @@ const actionCreator = {
           let action = {
             type: CHANGE_USERSTATE,
             user_state: {
-              ...res.data.userinfo,
-              token: res.token
+              ...res.data.date.userinfo,
+              token: res.data.token
             }
           }
           dispatch(action)

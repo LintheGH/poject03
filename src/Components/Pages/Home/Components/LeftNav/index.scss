@@ -1,0 +1,10 @@
+.ant-layout-sider {
+  height: 100%;
+  
+  .ant-layout-sider-children {
+    height: 100%;
+    .ant-menu {
+      height: 100%;
+    }
+  }
+}

@@ -10,7 +10,7 @@ class Router extends React.Component {
         <App>
           <Switch>
             <Route path="/login" component={ Login } />
-            <Route exact={ true } path="/" render={ function () {
+            <Route exact={ true } path="/" render={ function ({location}) {
               return (
                 <Home>
                   

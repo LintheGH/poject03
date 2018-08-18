@@ -11,7 +11,6 @@ class Login extends React.Component {
         console.log('Received values of form: ', values);
       }
     });
-    console.log(this.props)
     let username = this.props.form.getFieldValue('userName')
     let password = this.props.form.getFieldValue('password')
     let success = () => {

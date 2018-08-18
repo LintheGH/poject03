@@ -7,9 +7,11 @@ const http = {
         url: option.url,
         params: option.params || {}
       }).then((res) => {
+        console.log('succ')
         if (res.data.code === 200) {
           resolve(res)
         } else {
+          console.log('err')
           let code = res.data.code
           let message = this.judge(code)
           reject(message)

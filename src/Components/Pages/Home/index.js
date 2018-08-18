@@ -1,69 +1,78 @@
 import React from 'react'
 import './index.scss'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+import { Layout } from 'antd';
+import connect from '../../../Modules/connect'
+import Header from './Components/Header'
+import LeftNav from './Components/LeftNav'
+import Breadcrumb from './Components/Breadcrumb'
+import Content from './Components/Content'
 class Home extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      header: [],
+      settingMenu: [
+        { "id": 1, "title": "个人设置", icontype: "setting" },
+        { "id": 2, "title": "提醒信息", icontype: "notification" },
+        { "id": 3, "title": "退出登录", icontype: "export" }
+      ],
+      sideMenu: [],
+      currentSideMenu: []
+    }
+    this.changeSideNav = this.changeSideNav.bind(this)
+  }
+  
+  getHeader () {
+    let username = this.props.commons.user_state ? this.props.commons.user_state.username : ''
+    let level = this.props.commons.user_state ? this.props.commons.user_state.level : ''
+    this.$http.ajax({
+      method: 'GET',
+      url: './Api/header.json'
+    }).then(res => {
+      this.setState({
+        header: res.data.data.header
+      })
+    })
+  }
+
+  getSideMenu () {
+    let username = this.props.commons.user_state ? this.props.commons.user_state.username : ''
+    let level = this.props.commons.user_state ? this.props.commons.user_state.level : ''
+    this.$http.ajax({
+      method: 'GET',
+      url: './Api/sideMenu.json'
+    }).then(res => {
+      this.setState({
+        sideMenu: res.data.data.sideMenu,
+        currentSideMenu: res.data.data.sideMenu[0].children
+      })
+    })
+  }
+
+  changeSideNav (e) {
+    let value = e.item.props.children
+    let target = this.state.sideMenu.filter(item => item.title === value)[0].children
+    this.setState({
+      currentSideMenu: target
+    })
+  }
+
+  componentWillMount () {
+    this.getHeader()
+    this.getSideMenu()
+  }
 
   render () {
+    let { header,settingMenu } = this.state
     return (
       <div className="app-home">
         <Layout>
-          <Header
-            className="header"
-            style={{ display: 'flex', justifyContent: 'space-between', height: '40px' }}
-          >
-            <div className="logo">
-              logo
-            </div>
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={['1']}
-              style={{ lineHeight: '40px' }}
-            >
-              <Menu.Item key="1">nav 1</Menu.Item>
-              <Menu.Item key="2">nav 2</Menu.Item>
-              <Menu.Item key="3">nav 3</Menu.Item>
-            </Menu>
-          </Header>
+          <Header header={ header } settingMenu={ settingMenu } changeSideNav={ this.changeSideNav }/>
           <Layout>
-            <Sider width={200} style={{ background: '#fff' }}>
-              <Menu
-                mode="inline"
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                style={{ height: '100%', borderRight: 0 }}
-              >
-                <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-                  <Menu.Item key="1">option1</Menu.Item>
-                  <Menu.Item key="2">option2</Menu.Item>
-                  <Menu.Item key="3">option3</Menu.Item>
-                  <Menu.Item key="4">option4</Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
-                  <Menu.Item key="5">option5</Menu.Item>
-                  <Menu.Item key="6">option6</Menu.Item>
-                  <Menu.Item key="7">option7</Menu.Item>
-                  <Menu.Item key="8">option8</Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub3" title={<span><Icon type="notification" />subnav 3</span>}>
-                  <Menu.Item key="9">option9</Menu.Item>
-                  <Menu.Item key="10">option10</Menu.Item>
-                  <Menu.Item key="11">option11</Menu.Item>
-                  <Menu.Item key="12">option12</Menu.Item>
-                </SubMenu>
-              </Menu>
-            </Sider>
-            <Layout style={{ padding: '0 24px 24px' }}>
-              <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb>
-              <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
-                Content
-              </Content>
+            <LeftNav currentSideMenu={ this.state.currentSideMenu }/>
+            <Layout className="content-box" style={{ padding: '0 15px 15px' }}>
+              <Breadcrumb />
+              <Content />
             </Layout>
           </Layout>
         </Layout>
@@ -71,4 +80,4 @@ class Home extends React.Component {
     )
   }
 }
-export default Home
+export default connect(Home)
