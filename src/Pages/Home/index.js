@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.scss'
 import { Layout } from 'antd';
-import connect from '../../../Modules/connect'
+import connect from '../../Modules/connect'
 import Header from './Components/Header'
 import LeftNav from './Components/LeftNav'
 import Breadcrumb from './Components/Breadcrumb'
-import Content from './Components/Content'
+const { Content } = Layout;
 class Home extends React.Component {
   constructor (props) {
     super(props)
@@ -72,7 +72,9 @@ class Home extends React.Component {
             <LeftNav currentSideMenu={ this.state.currentSideMenu }/>
             <Layout className="content-box" style={{ padding: '0 15px 15px' }}>
               <Breadcrumb />
-              <Content />
+              <Content style={{ background: '#fff', padding: 10, margin: 0, minHeight: 280 }}>
+                { this.props.children }
+              </Content>
             </Layout>
           </Layout>
         </Layout>

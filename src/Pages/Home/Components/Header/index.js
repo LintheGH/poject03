@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 import { Layout, Menu, Icon, Dropdown } from 'antd';
-import connect from '../../../../../Modules/connect'
+import connect from '../../../../Modules/connect'
 const { Header } = Layout;
 class _Header extends React.Component {
   render () {
