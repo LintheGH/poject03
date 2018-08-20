@@ -1,0 +1,448 @@
+
+{
+  "code": 200,
+  "data": {
+    "sideMenu":[
+      {
+        "id": 1,
+        "title": "个人办公",
+        "icontype": "tags",
+        "children": [
+          {
+            "id": 1,
+            "title": "个人中心",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "个人设置",
+                "icontype": "setting",
+                "path": "/setting"
+              },
+              {
+                "id": 2,
+                "title": "提醒信息",
+                "icontype": "setting",
+                "path": "/message"
+              },
+              {
+                "id": 3,
+                "title": "个人资料",
+                "icontype": "setting",
+                "path": "/detail"
+              },
+              {
+                "id": 4,
+                "title": "我的薪资",
+                "icontype": "setting",
+                "path": "/pay"
+              },
+              {
+                "id": 5,
+                "title": "我的回话记录",
+                "icontype": "setting",
+                "path": "/talk"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "邮件",
+            "icontype": "tags",
+            "path": "/mails",
+            "children": []
+          },
+          {
+            "id": 3,
+            "title": "通知通告",
+            "icontype": "tags",
+            "path": "/board",
+            "children": []
+          },
+          {
+            "id": 4,
+            "title": "会议",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "今日会议",
+                "icontype": "setting",
+                "path": "/metting"
+              },
+              {
+                "id": 2,
+                "title": "会议室情况",
+                "icontype": "/mettingroom"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "我的考勤",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "我的考勤表",
+                "icontype": "setting",
+                "path": "/attend"
+              },
+              {
+                "id": 2,
+                "title": "我的外出记录",
+                "icontype": "setting",
+                "path": "/gouout"
+              },
+              {
+                "id": 3,
+                "title": "我的考勤信息",
+                "icontype": "setting",
+                "path": "/attendinfo"
+              },
+              {
+                "id": 4,
+                "title": "我的考勤统计",
+                "icontype": "setting",
+                "path": "/attendstatistics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "流程",
+        "icontype": "tags",
+        "children": [
+          {
+            "id": 1,
+            "title": "代办/处理",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "个人设置",
+                "icontype": "setting",
+                "path": "/setting"
+              },
+              {
+                "id": 2,
+                "title": "提醒信息",
+                "icontype": "setting",
+                "path": "/message"
+              },
+              {
+                "id": 3,
+                "title": "个人资料",
+                "icontype": "setting",
+                "path": "/detail"
+              },
+              {
+                "id": 4,
+                "title": "我的薪资",
+                "icontype": "setting",
+                "path": "/pay"
+              },
+              {
+                "id": 5,
+                "title": "我的回话记录",
+                "icontype": "setting",
+                "path": "/talk"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "流程申请",
+            "icontype": "tags",
+            "path": "/mails",
+            "children": []
+          },
+          {
+            "id": 3,
+            "title": "我的申请",
+            "icontype": "tags",
+            "path": "/board",
+            "children": []
+          },
+          {
+            "id": 4,
+            "title": "会议",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "今日会议",
+                "icontype": "setting",
+                "path": "/metting"
+              },
+              {
+                "id": 2,
+                "title": "会议室情况",
+                "icontype": "/mettingroom"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "我的考勤",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "我的考勤表",
+                "icontype": "setting",
+                "path": "/attend"
+              },
+              {
+                "id": 2,
+                "title": "我的外出记录",
+                "icontype": "setting",
+                "path": "/gouout"
+              },
+              {
+                "id": 3,
+                "title": "我的考勤信息",
+                "icontype": "setting",
+                "path": "/attendinfo"
+              },
+              {
+                "id": 4,
+                "title": "我的考勤统计",
+                "icontype": "setting",
+                "path": "/attendstatistics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "个人考勤",
+        "icontype": "tags",
+        "children": [
+          {
+            "id": 1,
+            "title": "个人中心",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "个人设置",
+                "icontype": "setting",
+                "path": "/setting"
+              },
+              {
+                "id": 2,
+                "title": "提醒信息",
+                "icontype": "setting",
+                "path": "/message"
+              },
+              {
+                "id": 3,
+                "title": "个人资料",
+                "icontype": "setting",
+                "path": "/detail"
+              },
+              {
+                "id": 4,
+                "title": "我的薪资",
+                "icontype": "setting",
+                "path": "/pay"
+              },
+              {
+                "id": 5,
+                "title": "我的回话记录",
+                "icontype": "setting",
+                "path": "/talk"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "邮件",
+            "icontype": "tags",
+            "path": "/mails",
+            "children": []
+          },
+          {
+            "id": 3,
+            "title": "通知通告",
+            "icontype": "tags",
+            "path": "/board",
+            "children": []
+          },
+          {
+            "id": 4,
+            "title": "会议",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "今日会议",
+                "icontype": "setting",
+                "path": "/metting"
+              },
+              {
+                "id": 2,
+                "title": "会议室情况",
+                "icontype": "/mettingroom"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "我的考勤",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "我的考勤表",
+                "icontype": "setting",
+                "path": "/attend"
+              },
+              {
+                "id": 2,
+                "title": "我的外出记录",
+                "icontype": "setting",
+                "path": "/gouout"
+              },
+              {
+                "id": 3,
+                "title": "我的考勤信息",
+                "icontype": "setting",
+                "path": "/attendinfo"
+              },
+              {
+                "id": 4,
+                "title": "我的考勤统计",
+                "icontype": "setting",
+                "path": "/attendstatistics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "系统",
+        "icontype": "tags",
+        "children": [
+          {
+            "id": 1,
+            "title": "个人中心",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "个人设置",
+                "icontype": "setting",
+                "path": "/setting"
+              },
+              {
+                "id": 2,
+                "title": "提醒信息",
+                "icontype": "setting",
+                "path": "/message"
+              },
+              {
+                "id": 3,
+                "title": "个人资料",
+                "icontype": "setting",
+                "path": "/detail"
+              },
+              {
+                "id": 4,
+                "title": "我的薪资",
+                "icontype": "setting",
+                "path": "/pay"
+              },
+              {
+                "id": 5,
+                "title": "我的回话记录",
+                "icontype": "setting",
+                "path": "/talk"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "邮件",
+            "icontype": "tags",
+            "path": "/mails",
+            "children": []
+          },
+          {
+            "id": 3,
+            "title": "通知通告",
+            "icontype": "tags",
+            "path": "/board",
+            "children": []
+          },
+          {
+            "id": 4,
+            "title": "会议",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "今日会议",
+                "icontype": "setting",
+                "path": "/metting"
+              },
+              {
+                "id": 2,
+                "title": "会议室情况",
+                "icontype": "/mettingroom"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "我的考勤",
+            "icontype": "tags",
+            "path": "",
+            "children": [
+              {
+                "id": 1,
+                "title": "我的考勤表",
+                "icontype": "setting",
+                "path": "/attend"
+              },
+              {
+                "id": 2,
+                "title": "我的外出记录",
+                "icontype": "setting",
+                "path": "/gouout"
+              },
+              {
+                "id": 3,
+                "title": "我的考勤信息",
+                "icontype": "setting",
+                "path": "/attendinfo"
+              },
+              {
+                "id": 4,
+                "title": "我的考勤统计",
+                "icontype": "setting",
+                "path": "/attendstatistics"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

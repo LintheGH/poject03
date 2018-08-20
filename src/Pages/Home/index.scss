@@ -4,8 +4,7 @@
 .ant-layout {
   height: 100%;
 }
-.logo {
-  color: #fff;
-  height: 100%;
-  line-height: 40px;
+.content-box {
+  display: flex;
+  flex-direction: column;
 }

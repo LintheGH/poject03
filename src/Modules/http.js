@@ -8,8 +8,10 @@ const http = {
         params: option.params || {}
       }).then((res) => {
         if (res.data.code === 200) {
+          console.log('succ')
           resolve(res)
         } else {
+          console.log('err')
           let code = res.data.code
           let message = this.judge(code)
           reject(message)

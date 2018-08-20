@@ -33,7 +33,6 @@ const _connect = function (UIcomponent, ...option) {
     let action = {}
     option.map((item) => {
       if ((typeof item) === 'string') {
-        console.log(item)
         if (actionCreator[item]) {
           action[item] = bindActionCreators(actionCreator[item], dispatch) // bindActionCreators 返回值是一个函数，这个函数dispatch 里面的 action 
         }
