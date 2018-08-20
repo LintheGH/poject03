@@ -1,0 +1,39 @@
+{
+  "code": 200,
+  "data": [{
+    "key": "1",
+    "title": "title",
+    "type": "通知公告",
+    "receive": "开发部",
+    "send": "总经部",
+    "date": "2018-8-20",
+    "isreaded": "noRead"
+  }, {
+    "key": "2",
+    "title": "Jim Gren",
+    "type": "通知公告",
+    "receive": "开发部",
+    "send": "人事部",
+    "date": "2018-8-20",
+    "isreaded": "noRead"
+
+  }, {
+    "key": "3",
+    "title": "Joe Blak",
+    "type": "规章制度",
+    "receive": "销售部",
+    "send": "总经部",
+    "date": "2018-8-20",
+    "isreaded": "isReaded"
+
+  }, {
+    "key": "4",
+    "title": "Jim Red",
+    "type": "通知公告",
+    "receive": "开发部",
+    "send": "总经部",
+    "date": "2018-8-20",
+    "isreaded": "isReaded"
+  }]
+}
+  

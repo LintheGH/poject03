@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 import { Form, Icon, Input, Button, Checkbox } from 'antd'
-import connect from '../../../Modules/connect'
+import connect from '../../Modules/connect'
 const FormItem = Form.Item;
 class Login extends React.Component {
   handleSubmit = (e) => {
@@ -14,7 +14,7 @@ class Login extends React.Component {
     let username = this.props.form.getFieldValue('userName')
     let password = this.props.form.getFieldValue('password')
     let success = () => {
-      this.props.history.replace('/')
+      this.props.history.replace('/board')
     }
     this.props.login(username, password, success)
   }

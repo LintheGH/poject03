@@ -7,8 +7,8 @@ const http = {
         url: option.url,
         params: option.params || {}
       }).then((res) => {
-        console.log('succ')
         if (res.data.code === 200) {
+          console.log('succ')
           resolve(res)
         } else {
           console.log('err')
